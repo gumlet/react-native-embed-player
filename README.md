@@ -5,9 +5,20 @@
 
 ## Installation
 
+#### setup react native webview
+
+```sh
+$ npm install react-native-webview
+$ cd ios/
+$ pod install 
+```
+
 ```sh
 npm install @gumlet/react-native-embed-player
 ```
+
+
+
 
 ## Usage
 
