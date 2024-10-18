@@ -47,7 +47,7 @@ jobs:
       - name: release package
         run: yarn release-it
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   # build-android:
   #   runs-on: ubuntu-latest
