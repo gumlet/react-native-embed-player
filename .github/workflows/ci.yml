@@ -39,6 +39,16 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0   # Ensures full git history for release-it
+      
+      # Fetch all tags explicitly
+      - name: Fetch all tags
+        run: git fetch --tags
+
+      # Set HEAD to the latest tag (to avoid symbolic ref issue)
+      - name: Set HEAD to latest tag
+        run: |
+          TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
+          git checkout $TAG
 
       - name: Setup
         uses: ./.github/actions/setup
