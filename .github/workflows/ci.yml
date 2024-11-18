@@ -33,24 +33,23 @@ jobs:
         run: yarn test --maxWorkers=2 --coverage
 
   build-and-release-library:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      
-      - name: Setup
-        uses: ./.github/actions/setup
-      
-      - name: Authenticate with npm
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+    runs-on: ubuntu-20.04
+    needs: [test]
 
-      # - name: Build package
-      #   run: yarn prepare
-      
-      - name: Publish package
-        run: npm publish
-        # env:
-        #   NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        registry-url: 'https://registry.npmjs.org'
+    - name: Build
+      run: |
+        npm ci
+        npm run-script build
+        npm publish
+      env:
+        NODE_ENV: "production"
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   # build-android:
   #   runs-on: ubuntu-latest
