@@ -18,8 +18,9 @@ export const ReactNativeEmbedPlayerView: React.FC<
   ReactNativeEmbedPlayerProps
 > = ({ video_id, style, enabled_player_control, ...props }) => {
   const userAgent = Platform.select({
-    ios: "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
-    android: "Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36",
+    ios: 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1',
+    android:
+      'Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36',
   });
 
   if (!video_id) {
@@ -51,7 +52,7 @@ export const ReactNativeEmbedPlayerView: React.FC<
         originWhitelist={['*']}
         source={{ uri: srcURL.toString() }}
         style={style}
-    />
+      />
     </>
   );
 };
