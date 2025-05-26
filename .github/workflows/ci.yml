@@ -58,7 +58,7 @@ jobs:
       run: yarn prepublishOnly
 
     - name: Publish to npm
-      run: yarn publish --non-interactive
+      run: yarn npm publish --access public --tolerate-republish
       env:
         NODE_ENV: "production"
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
