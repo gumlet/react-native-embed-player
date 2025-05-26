@@ -33,7 +33,7 @@ jobs:
         run: yarn test --maxWorkers=2 --coverage
 
   build-and-release-library:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     needs: [test]
 
     steps:
