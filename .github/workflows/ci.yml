@@ -15,10 +15,10 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Lint files
-        run: npm lint
+        run: npm run lint
 
       - name: Typecheck files
-        run: npm typecheck
+        run: npm run typecheck
 
   test:
     runs-on: ubuntu-latest
