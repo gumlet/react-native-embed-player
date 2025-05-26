@@ -42,11 +42,23 @@ jobs:
       with:
         node-version: 16
         registry-url: 'https://registry.npmjs.org'
+    # - name: Build
+    #   run: |
+    #     npm ci
+    #     npm run-script build
+    #     npm publish
+    #   env:
+    #     NODE_ENV: "production"
+    #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
     - name: Build
-      run: |
-        npm ci
-        npm run-script build
-        npm publish
+      run: yarn build
+
+    - name: Publish to npm
+      run: yarn publish --non-interactive
       env:
         NODE_ENV: "production"
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
