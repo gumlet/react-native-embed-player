@@ -47,9 +47,6 @@ jobs:
       run: npm ci
       env:
         NODE_ENV: ""   # unset NODE_ENV or set to development
-
-    - name: Build
-      run: npm run prepublishOnly
     
     - name: Publish to npm
       run: npm publish
