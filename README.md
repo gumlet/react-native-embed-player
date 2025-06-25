@@ -34,7 +34,8 @@ import { ReactNativeEmbedPlayerView } from "@gumlet/react-native-embed-player";
 ## Props
 | Prop          | Description   | Default       |
 | ------------- | ------------- | ------------- |
-| videoID `String` `Required`   | Video ID which is generated after processing the video on gumlet  | |
+| video_id `String` `Required`   | Video ID which is generated after processing the video on gumlet  | |
+| is_live `Boolean` `Optional`   | Whether the video is live or not | false |
 | style `Object`  `Required`    | Style tag passed on to the iframe container |  |
 | autoplay `Boolean`            | Should the video autoplay | Default set in collection settings |
 | preload `Boolean`             | Should the video preload  | Default set in collection settings |
