@@ -55,6 +55,7 @@ import { ReactNativeEmbedPlayerView } from "@gumlet/react-native-embed-player";
 | watermark_text `String`       | Watermark text to be shown in the player | null |
 | facebook_pixel_id `String`    | Facebook pixel ID to be used to send data about playback | null |
 | ga_tracking_id `String`       | Google pixel ID to be used to send data about playback | null |
+| linkedin_tracking_id `String` | LinkedIn pixel ID to be used to send data about playback | null |
 | t `Integer`                   | The playback instant in seconds to start the video at | null |
 
 
