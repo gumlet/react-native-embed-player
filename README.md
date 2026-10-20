@@ -1,5 +1,8 @@
 # @gumlet/react-native-embed-player
 
+[![npm version](https://img.shields.io/npm/v/@gumlet/react-native-embed-player)](https://www.npmjs.com/package/@gumlet/react-native-embed-player)
+[![npm downloads](https://img.shields.io/npm/dm/@gumlet/react-native-embed-player)](https://www.npmjs.com/package/@gumlet/react-native-embed-player)
+
 > Gumlet Embed player in react native
 
 
